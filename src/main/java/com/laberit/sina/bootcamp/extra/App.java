@@ -20,8 +20,6 @@ public class App{
 
         List<Pokemon> listOfPoke = PokemonGetter.getAllFilteredByName("ter");
         System.out.println(listOfPoke);
-
-
     }
 
 
