@@ -38,22 +38,11 @@ public class PokemonGetter {
     private static List<String> url2List(String url) throws Exception {
         HttpEntity entity = makeRequest(url);
 
-        List<String> listOfPokemon = new ArrayList<>();
-        if (entity != null) {
 
-            String jsonResponse = EntityUtils.toString(entity);
-            ObjectMapper objectMapper = new ObjectMapper();
-            JsonNode rootNode = objectMapper.readTree(jsonResponse);
-
-            JsonNode resultsNode = rootNode.path("results");
-
-            for (JsonNode node : resultsNode) {
-                String name = node.path("name").asText();
-                listOfPokemon.add(name);
-            }
+        if (entity == null) {return null;} else {
+            return JSONParser.toStringList(entity);
         }
 
-        return listOfPokemon;
 
     }
 
