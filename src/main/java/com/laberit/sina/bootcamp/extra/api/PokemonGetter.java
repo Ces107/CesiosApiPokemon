@@ -32,8 +32,7 @@ public class PokemonGetter {
 
         List<Pokemon> listaPokemon = listStrings.stream()
                 .filter(n -> n.toLowerCase().contains(name.toLowerCase()))
-                .map(n2 -> {try { return url2PokemonConverter(BASE_URL + n2);} catch (Exception e) {return null;}
-                })
+                .map(n2 -> {try { return url2PokemonConverter(BASE_URL + n2);} catch (Exception e) {return null;}})
                 .filter(Objects::nonNull)
                 .collect(Collectors.toList());
 
