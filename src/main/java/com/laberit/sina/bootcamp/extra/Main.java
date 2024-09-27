@@ -8,7 +8,6 @@ import static com.laberit.sina.bootcamp.extra.api.PokemonGetter.*;
 
 public class Main {
 
-
     public static void main(String[] args) throws Exception {
         Pokemon pokemonId1 = getById(1);
         System.out.println(pokemonId1.toString());

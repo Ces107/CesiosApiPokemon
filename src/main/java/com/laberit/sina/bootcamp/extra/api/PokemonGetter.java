@@ -9,7 +9,6 @@ import java.util.stream.Collectors;
 import static com.laberit.sina.bootcamp.extra.services.PokemonService.url2List;
 import static com.laberit.sina.bootcamp.extra.services.PokemonService.url2PokemonConverter;
 
-
 public class PokemonGetter {
 
     private static final String BASE_URL = "https://pokeapi.co/api/v2/pokemon/";
@@ -38,7 +37,12 @@ public class PokemonGetter {
         return listStrings.stream()
                 .filter(n -> n.toLowerCase().contains(name.toLowerCase()))
                 .map(n2 -> {
-                    try {return url2PokemonConverter(BASE_URL + n2);} catch (Exception e) {return null;}})
+                    try {
+                        return url2PokemonConverter(BASE_URL + n2);
+                    } catch (Exception e) {
+                        return null;
+                    }
+                })
                 .filter(Objects::nonNull)
                 .collect(Collectors.toList());
     }

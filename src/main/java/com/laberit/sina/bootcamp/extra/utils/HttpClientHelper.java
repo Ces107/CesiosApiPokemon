@@ -6,7 +6,6 @@ import org.apache.hc.client5.http.impl.classic.CloseableHttpResponse;
 import org.apache.hc.client5.http.impl.classic.HttpClientBuilder;
 import org.apache.hc.core5.http.HttpEntity;
 
-
 import java.io.IOException;
 
 @SuppressWarnings("deprecation")
