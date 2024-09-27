@@ -32,7 +32,6 @@ public class JSONParser {
         return listOfPokemon;
 
 
-
     }
 
     public static <T> T toObject(HttpEntity httpEntity, Class<T> clazz) {

@@ -1,6 +1,6 @@
 package com.laberit.sina.bootcamp.extra.services;
 
-import com.laberit.sina.bootcamp.extra.api.HttpClientHelper;
+import com.laberit.sina.bootcamp.extra.utils.HttpClientHelper;
 import com.laberit.sina.bootcamp.extra.models.Pokemon;
 import com.laberit.sina.bootcamp.extra.utils.JSONParser;
 import org.apache.hc.core5.http.HttpEntity;
