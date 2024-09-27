@@ -34,12 +34,8 @@ public class JSONParser {
 
     }
 
-    public static <T> T toObject(HttpEntity httpEntity, Class<T> clazz) {
-        try {
-            String bodyResponseAsJson = EntityUtils.toString(httpEntity);
-            return objectMapper.readValue(bodyResponseAsJson, clazz);
-        } catch (IOException | ParseException e) {
-            throw new RuntimeException(e);
-        }
+    public static <T> T toObject(HttpEntity httpEntity, Class<T> clazz) throws IOException, ParseException {
+        String bodyResponseAsJson = EntityUtils.toString(httpEntity);
+        return objectMapper.readValue(bodyResponseAsJson, clazz);
     }
 }

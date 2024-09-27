@@ -9,7 +9,8 @@ import org.apache.hc.core5.http.HttpEntity;
 
 import java.io.IOException;
 
-public class HttpClientHelper {
+@SuppressWarnings("deprecation")
+public class HttpClientHelper{
 
     public static HttpEntity makeRequest(String url) throws IOException {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();

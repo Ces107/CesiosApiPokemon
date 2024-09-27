@@ -30,13 +30,18 @@ public class PokemonGetter {
         String url = BASE_URL + "?limit=250";
         List<String> listStrings = url2List(url);
 
-        List<Pokemon> listaPokemon = listStrings.stream()
+        assert listStrings != null;
+        return getPokemonListFromStringListFilteredByName(listStrings, name);
+    }
+
+    public static List<Pokemon> getPokemonListFromStringListFilteredByName(List<String> listStrings, String name) {
+        return listStrings.stream()
                 .filter(n -> n.toLowerCase().contains(name.toLowerCase()))
-                .map(n2 -> {try { return url2PokemonConverter(BASE_URL + n2);} catch (Exception e) {return null;}
-                })
+                .map(n2 -> {
+                    try {return url2PokemonConverter(BASE_URL + n2);} catch (Exception e) {return null;}})
                 .filter(Objects::nonNull)
                 .collect(Collectors.toList());
-
-        return listaPokemon;
     }
+
+
 }
