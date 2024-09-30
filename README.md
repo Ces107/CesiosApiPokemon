@@ -4,7 +4,7 @@ CesiosPokemonApi es una API desarrollada en Java que te permite interactuar con 
 
 ## Requisitos Previos
 
-- Java 16 o superior
+- Java 17 o superior
 - Apache Maven instalado
 - Acceso al repositorio de GitHub de CesiosPokemonApi
 
